@@ -5,9 +5,9 @@ import picamera.array
 
 # Define parking spaces (replace with your coordinates)
 spaces = [
-    {'poly': np.array([(418, 323), (593, 320), (662, 473), (399, 479)]), 'occupied': False},
-    {'poly': np.array([(187, 316), (386, 318), (355, 479), (47, 491)]), 'occupied': False},
-    {'poly': np.array([(624, 318), (799, 314), (966, 468), (705, 475)]), 'occupied': False}
+        {'poly': np.array([(199, 317), (379, 316), (321, 461), (64, 466)]), 'occupied': False, 'ID':"1"},
+        {'poly': np.array([(414, 314), (590, 312), (626, 465), (366, 467)]), 'occupied': False, 'ID':"2"},
+        {'poly': np.array([(625, 315), (820, 310), (965, 466), (674, 465)]), 'occupied': False, 'ID':"3"}
 ]
 
 def is_space_occupied(image, space):
@@ -27,7 +27,7 @@ def is_space_occupied(image, space):
         
         if cv2.pointPolygonTest(poly, center, False) >= 0:
             contour_area = cv2.contourArea(contour)
-            if contour_area > 100 and contour_area < 5000:  # Sensitivity
+            if contour_area > 10 and contour_area < 5000:  # Sensitivity
                 return True
     
     return False
@@ -35,6 +35,7 @@ def is_space_occupied(image, space):
 
 with picamera.PiCamera() as camera:
     camera.vflip = True
+    camera.hflip = True
     with picamera.array.PiRGBArray(camera) as stream:
         while True:
             camera.capture(stream, 'bgr', use_video_port=True)
