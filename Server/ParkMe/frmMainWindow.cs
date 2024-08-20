@@ -33,11 +33,13 @@ namespace ParkMe
 
             parkingSpaceLogic.UpdateParkingSpace(spaceId, occupied, licensePlate);
 
+            var space = parkingSpaceLogic.GetParkingSpace(spaceId);
+            Color? customColor = null;
+
             lblNumberOfTakenSpaces.Text = $"{parkingSpaceLogic.GetTotalAvailability()}/{parkingSpaceLogic.GetTotalSpaces()} slobodno";
 
-            UpdateParkingSpaceUI(spaceId, occupied, licensePlate);
+            
 
-            var space = parkingSpaceLogic.GetParkingSpace(spaceId);
             if (occupied && space.ReservedForLicensePlate != null)
             {
                 if (space.ReservedForLicensePlate == licensePlate)
@@ -47,13 +49,17 @@ namespace ParkMe
                 else
                 {
                     MessageBox.Show($"Automobil s registracijskom oznakom {licensePlate} se parkiralo na mjesto broj {spaceId} rezervirano za {space.ReservedForLicensePlate}.", "Upozorenje!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    customColor = Color.Yellow;
                 }
             }
+
+            UpdateParkingSpaceUI(spaceId, occupied, licensePlate, customColor);
         }
 
-        private void UpdateParkingSpaceUI(int spaceId, bool occupied, string licensePlate)
+
+        private void UpdateParkingSpaceUI(int spaceId, bool occupied, string licensePlate, Color? customColor = null)
         {
-            Color panelColor = occupied ? Color.Red : Color.Green;
+            Color panelColor = customColor ?? (occupied ? Color.Red : Color.Green);
             string statusText = occupied ? "Zauzeto" : "Slobodno";
             string plateText = $"Tablica: {licensePlate ?? "N/A"}";
 
@@ -76,6 +82,7 @@ namespace ParkMe
                     break;
             }
         }
+
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
