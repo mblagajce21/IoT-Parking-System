@@ -24,6 +24,8 @@
             this.panelSpace3 = new System.Windows.Forms.Panel();
             this.labelSpace3 = new System.Windows.Forms.Label();
             this.labelPlate3 = new System.Windows.Forms.Label();
+            this.labelTotalSpaces = new System.Windows.Forms.Label();
+            this.labelOccupiedSpaces = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // panelSpace1
@@ -112,12 +114,26 @@
             this.labelPlate3.Size = new System.Drawing.Size(108, 25);
             this.labelPlate3.TabIndex = 8;
             this.labelPlate3.Text = "Tablica: N/A";
+
+
+            // Set properties for these labels
+            this.labelTotalSpaces.AutoSize = true;
+            this.labelTotalSpaces.Location = new System.Drawing.Point(50, 250);
+            this.labelTotalSpaces.Name = "labelTotalSpaces";
+            this.labelTotalSpaces.Size = new System.Drawing.Size(140, 25);
+            this.labelTotalSpaces.Text = "Ukupan broj mjesta: 3";
+
+            this.labelOccupiedSpaces.AutoSize = true;
+            this.labelOccupiedSpaces.Location = new System.Drawing.Point(50, 280);
+            this.labelOccupiedSpaces.Name = "labelOccupiedSpaces";
+            this.labelOccupiedSpaces.Size = new System.Drawing.Size(185, 25);
+            this.labelOccupiedSpaces.Text = "Broj zauzetih mjesta: 0";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 300);
+            this.ClientSize = new System.Drawing.Size(800, 350);
             this.Controls.Add(this.labelPlate3);
             this.Controls.Add(this.labelSpace3);
             this.Controls.Add(this.panelSpace3);
@@ -127,6 +143,8 @@
             this.Controls.Add(this.labelPlate1);
             this.Controls.Add(this.labelSpace1);
             this.Controls.Add(this.panelSpace1);
+            this.Controls.Add(this.labelTotalSpaces);
+            this.Controls.Add(this.labelOccupiedSpaces);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Parkirna mjesta";
@@ -144,5 +162,7 @@
         private System.Windows.Forms.Panel panelSpace3;
         private System.Windows.Forms.Label labelSpace3;
         private System.Windows.Forms.Label labelPlate3;
+        private System.Windows.Forms.Label labelTotalSpaces;
+        private System.Windows.Forms.Label labelOccupiedSpaces;
     }
 }
