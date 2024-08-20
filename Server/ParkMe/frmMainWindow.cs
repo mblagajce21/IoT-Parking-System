@@ -42,16 +42,13 @@ namespace ParkMe
             {
                 if (space.ReservedForLicensePlate == licensePlate)
                 {
-                    MessageBox.Show($"Automobil s registracijskom oznakom {licensePlate} se parkirao na svoje parkirno mjesto {spaceId}.", "Vozilo parkirano", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"Automobil s registracijskom oznakom {licensePlate} se parkiralo na svoje parkirno mjesto {spaceId}.", "Vozilo parkirano", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show($"Automobil s registracijskom oznakom {licensePlate} se parkirao na mjesto rezervirano za: {space.ReservedForLicensePlate}.", "Upozorenje!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show($"Automobil s registracijskom oznakom {licensePlate} se parkiralo na mjesto broj {spaceId} rezervirano za {space.ReservedForLicensePlate}.", "Upozorenje!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-
-            //lblNumberOfTakenSpaces.Text = $"{parkingSpaceLogic.GetTotalAvailability()} mjesta zauzeto od {parkingSpaceLogic.GetTotalSpaces()}";
-
         }
 
         private void UpdateParkingSpaceUI(int spaceId, bool occupied, string licensePlate)
@@ -84,6 +81,12 @@ namespace ParkMe
         {
             sensorReceiver.Close();
             base.OnFormClosing(e);
+        }
+
+        private void premaRegistracijiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSearchSpaces searchForm = new frmSearchSpaces();
+            searchForm.ShowDialog();
         }
     }
 }

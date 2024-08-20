@@ -141,7 +141,7 @@
             // lblNumberOfTakenSpaces
             // 
             this.lblNumberOfTakenSpaces.Name = "lblNumberOfTakenSpaces";
-            this.lblNumberOfTakenSpaces.Size = new System.Drawing.Size(67, 17);
+            this.lblNumberOfTakenSpaces.Size = new System.Drawing.Size(77, 17);
             this.lblNumberOfTakenSpaces.Text = "3/3 slobodno";
             // 
             // contextMenuStrip1
@@ -201,8 +201,9 @@
             this.premaRegistracijiToolStripMenuItem.Name = "premaRegistracijiToolStripMenuItem";
             this.premaRegistracijiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.premaRegistracijiToolStripMenuItem.Text = "Prema registraciji";
+            this.premaRegistracijiToolStripMenuItem.Click += new System.EventHandler(this.premaRegistracijiToolStripMenuItem_Click);
             // 
-            // Form1
+            // frmMainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -220,7 +221,7 @@
             this.Controls.Add(this.panelSpace1);
             this.MainMenuStrip = this.mainMenu;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Form1";
+            this.Name = "frmMainWindow";
             this.Text = "Parkirna mjesta";
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
