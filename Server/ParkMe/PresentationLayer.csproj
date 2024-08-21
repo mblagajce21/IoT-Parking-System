@@ -58,6 +58,12 @@
     <Compile Include="frmSearchSpaces.Designer.cs">
       <DependentUpon>frmSearchSpaces.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSpaceReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSpaceReservation.Designer.cs">
+      <DependentUpon>frmSpaceReservation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmMainWindow.resx">
@@ -65,6 +71,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSearchSpaces.resx">
       <DependentUpon>frmSearchSpaces.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSpaceReservation.resx">
+      <DependentUpon>frmSpaceReservation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

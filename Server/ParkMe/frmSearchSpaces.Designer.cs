@@ -44,9 +44,9 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(223, 9);
+            this.btnSearch.Location = new System.Drawing.Point(210, 30);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(91, 41);
+            this.btnSearch.Size = new System.Drawing.Size(91, 20);
             this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "Pretraži vozilo";
             this.btnSearch.UseVisualStyleBackColor = true;

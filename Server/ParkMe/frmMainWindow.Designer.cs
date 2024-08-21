@@ -35,6 +35,7 @@
             this.mainMenu = new System.Windows.Forms.MenuStrip();
             this.pretražiMjestaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.premaRegistracijiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rezervacijaMjestaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
@@ -181,7 +182,8 @@
             // 
             this.mainMenu.BackColor = System.Drawing.SystemColors.Control;
             this.mainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pretražiMjestaToolStripMenuItem});
+            this.pretražiMjestaToolStripMenuItem,
+            this.rezervacijaMjestaToolStripMenuItem});
             this.mainMenu.Location = new System.Drawing.Point(0, 0);
             this.mainMenu.Name = "mainMenu";
             this.mainMenu.Size = new System.Drawing.Size(400, 24);
@@ -202,6 +204,13 @@
             this.premaRegistracijiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.premaRegistracijiToolStripMenuItem.Text = "Prema registraciji";
             this.premaRegistracijiToolStripMenuItem.Click += new System.EventHandler(this.premaRegistracijiToolStripMenuItem_Click);
+            // 
+            // rezervacijaMjestaToolStripMenuItem
+            // 
+            this.rezervacijaMjestaToolStripMenuItem.Name = "rezervacijaMjestaToolStripMenuItem";
+            this.rezervacijaMjestaToolStripMenuItem.Size = new System.Drawing.Size(115, 20);
+            this.rezervacijaMjestaToolStripMenuItem.Text = "Rezervacija mjesta";
+            this.rezervacijaMjestaToolStripMenuItem.Click += new System.EventHandler(this.rezervacijaMjestaToolStripMenuItem_Click);
             // 
             // frmMainWindow
             // 
@@ -253,5 +262,6 @@
         private System.Windows.Forms.MenuStrip mainMenu;
         private System.Windows.Forms.ToolStripMenuItem pretražiMjestaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem premaRegistracijiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rezervacijaMjestaToolStripMenuItem;
     }
 }

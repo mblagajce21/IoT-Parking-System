@@ -95,5 +95,11 @@ namespace ParkMe
             frmSearchSpaces searchForm = new frmSearchSpaces();
             searchForm.ShowDialog();
         }
+
+        private void rezervacijaMjestaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSpaceReservation spaceReservationForm = new frmSpaceReservation();
+            spaceReservationForm.ShowDialog();
+        }
     }
 }

@@ -36,7 +36,9 @@ namespace ParkMe
 
             if (matchingSpace == null)
             {
+                MessageBox.Show("Vozilo nije pronađeno!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 lblCarLocation.Text = "N/A";
+                return;
             }
             else
             {

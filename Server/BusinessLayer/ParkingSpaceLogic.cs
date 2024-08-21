@@ -16,7 +16,7 @@ namespace BusinessLayer
         {
             parkingSpaces = new List<ParkingSpace>
             {
-            new ParkingSpace(1, "ABC123"),
+            new ParkingSpace(1),
             new ParkingSpace(2),
             new ParkingSpace(3)
             };
