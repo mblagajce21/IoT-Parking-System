@@ -57,7 +57,7 @@
             this.btnAddOrUpdate.Name = "btnAddOrUpdate";
             this.btnAddOrUpdate.Size = new System.Drawing.Size(95, 23);
             this.btnAddOrUpdate.TabIndex = 2;
-            this.btnAddOrUpdate.Text = "Add/Update";
+            this.btnAddOrUpdate.Text = "Dodaj/Ažuriraj";
             this.btnAddOrUpdate.UseVisualStyleBackColor = true;
             this.btnAddOrUpdate.Click += new System.EventHandler(this.btnAddOrUpdate_Click);
             // 
@@ -67,7 +67,7 @@
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(95, 23);
             this.btnRemove.TabIndex = 3;
-            this.btnRemove.Text = "Remove";
+            this.btnRemove.Text = "Obriši";
             this.btnRemove.UseVisualStyleBackColor = true;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
